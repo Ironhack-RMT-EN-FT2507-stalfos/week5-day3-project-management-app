@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 
-function ProjectCard () {
+function ProjectCard ({title, description, id}) {
+  // console.log(props)
   
   return (
     <div className="ProjectCard card">
-      <Link to={``}>
-        <h3>PROJECT_TITLE_HERE</h3>
+      <Link to={`/projects/${id}`}>
+        <h3>{title}</h3>
       </Link>
-      <p>PROJECT_DESCRIPTION_HERE</p>
+      <p>{description}</p>
     </div>
   );
 }
